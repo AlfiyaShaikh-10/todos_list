@@ -19,7 +19,7 @@ export default function  AddTodo  ({ addTodo }){
     }
     return (
         <div className="container my-3" >
-            <h3>Add a Todo</h3>
+            <h3><u>Add a Todo</u></h3>
             <form onSubmit={submit}>
                 <div className="mb-3">
                     <label htmlFor="title" className="form-label">Todo Title</label>
