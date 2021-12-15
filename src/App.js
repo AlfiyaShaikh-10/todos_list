@@ -6,6 +6,12 @@ import React, { useState, useEffect } from "react";
 import AddTodo from "./components/AddTodo";
 
 function App() {
+  const myStyle={
+    minheight:' 80vh',
+    margin:"40px, auto",
+    // height: '100vh'
+
+}
   let initTodo;
   if (localStorage.getItem("todos") === null) {
     initTodo = [];
@@ -54,8 +60,16 @@ function App() {
   return (
     <div>
       <Navbar />
+      <div class="container my-4" style={myStyle}>
+      <div class="row">
+      <div class="col-sm-6 col-md-6 col-lg-6">
       <AddTodo addTodo={addTodo} />
-      <Todos todos={todos} onDelete={onDelete} />
+      </div>
+<div class="col-sm-6 col-md-6 col-lg-6">
+<Todos todos={todos} onDelete={onDelete} />
+</div>
+      </div>
+      </div>
       <Footer />
     </div>
   );

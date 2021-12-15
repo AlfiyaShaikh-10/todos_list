@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 export default function  AddTodo  ({ addTodo }){
+   
     const [title, setTitle] = useState("");
     const [desc, setDesc] = useState("");
 
@@ -17,7 +18,7 @@ export default function  AddTodo  ({ addTodo }){
         }
     }
     return (
-        <div className="container my-3">
+        <div className="container my-3" >
             <h3>Add a Todo</h3>
             <form onSubmit={submit}>
                 <div className="mb-3">
